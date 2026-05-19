@@ -113,9 +113,8 @@ export default function QrDisplayPage() {
             <Card className="bg-zinc-50 p-4 sm:p-5">
               <p className="text-sm text-zinc-500">Students Scanned</p>
               <div className="mt-2 flex items-end justify-between">
-                <p className="text-4xl font-bold">
-                  {attendance?.summary?.present + attendance?.summary?.late ?? 0}/
-                  {attendance?.summary?.total ?? 0}
+               <p className="text-4xl font-bold">
+                  { (attendance?.summary?.present ?? 0) + (attendance?.summary?.late ?? 0) } / { attendance?.summary?.total ?? 0 }
                 </p>
                 <p className="text-lg font-semibold text-zinc-600">
                   {attendance?.summary?.total
